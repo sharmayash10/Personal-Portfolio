@@ -1,11 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PersonalPortfolio</title>
+    <style>
+        * {
+            margin: 0px 10px;
+            padding: 0px;
+        }
+
+        body {
+            /* background-image: url(../Images/background1.webp); */
+            /* background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),  url("Images/background1.webp"); */
+            /* background-color: #f6f0f0; */
+            background-color: whitesmoke;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: larger;
+            padding: 1em 0em;
+            margin-bottom: 20vh;
+        }
+
+        .nav_logo {
+            margin-right: auto;
+            cursor: crosshair;
+        }
+
+        nav li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            position: relative;
+            padding: 2px 5px;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        nav ul li a::before,
+        nav ul li a::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            background-color: darkcyan;
+            height: 2px;
+            left: 0px;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        nav ul li a::before {
+            top: 0px;
+            transform: translateY(8px);
+        }
+
+        nav ul li a::after {
+            bottom: 0px;
+            transform: translateY(-8px);
+        }
+
+        nav ul li a:hover::after,
+        nav ul li a:hover::before {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+        .intro {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 80vw;
+            margin: auto;
+
+        }
+
+        .intro img {
+            border-radius: 50%;
+            width: 500px;
+        }
+
+        .circle {
+            width: 130px;
+            height: 130px;
+            margin: 7vh 5px;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+        }
+
+        .dot1 {
+            background-color: rgb(238, 176, 60);
+        }
+
+        .dot2 {
+            background-color: red;
+        }
+
+        .dot3 {
+            background-color: lightblue;
+        }
+
+        span {
+            font-weight: bold;
+            font-size: 20px;
+            position: absolute;
+            left: 43%;
+            top: 40%;
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
-    
+
+<body>
+    <header>
+        <div class="nav_logo">
+            <p>YASH SHARMA</p>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a>RESUME</a></li>
+                    <li><a>PROJECTS</a></li>
+                    <li><a>CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="intro">
+        <img src="Images/photo.webp" alt="">
+        <div>
+            <h1 style="font-size: 80px; margin-top: 10vh; margin-bottom: 5vh;">Hello</h1>
+            <h1 style="margin-bottom: 2vh">A Bit About Me</h1>
+            <p style="line-height: 1.6;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sequi praesentium
+                natus quo dolore obcaecati accusamus dolorem necessitatibus enim quibusdam!</p>
+            <div class="circle dot1"><span>Resume</span></div>
+            <div class="circle dot2"><span>Projects</span></div>
+            <div class="circle dot3"><span>Contact</span></div>
+        </div>
+    </section>
 </body>
+
 </html>
