@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PersonalPortfolio</title>
     <style>
+        html{
+            scroll-behavior: smooth;
+        }
         * {
             margin: 0px 10px;
             padding: 0px;
@@ -81,14 +84,15 @@
             align-content: center;
             justify-content: center;
             font-family: Arial, Helvetica, sans-serif;
-            width: 80vw; 
+            width: 80vw;
             margin: auto;
-
+            padding-bottom: 30vh;
         }
 
         .intro img {
             border-radius: 50%;
             width: 500px;
+            padding-right: 20px;
         }
 
         .circle {
@@ -101,6 +105,7 @@
             display: inline-block;
             text-align: center;
             transition: all 0.3s;
+            
         }
 
         .dot1 {
@@ -119,9 +124,28 @@
             font-weight: bold;
             font-size: 20px;
         }
-        .circle:hover{
+
+        .circle:hover {
             cursor: pointer;
             background-color: white;
+        }
+
+        footer {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 7vh 0vh;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 5vw;
+
+        }
+
+        footer div{
+            line-height: 2em;
+        }
+        footer a{
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -153,6 +177,22 @@
             <div class="circle dot3"><span>Contact</span></div>
         </div>
     </section>
+    <hr>
+    <footer>
+        <div>
+            <h3>Phone</h3>
+            <a href="tel:7487009846">7487009846</a>
+        </div>
+        <div>
+            <h3>Email</h3>
+            <a href="mailto:0yashs12@gmail.com">0yashs12@gmail.com</a>
+        </div>
+        <div>
+            <h3>Follow me</h3>
+            <p>Twitter</p>
+        </div>
+        <div>&#169; 2023 By Yash Sharma.</div>
+    </footer>
 </body>
 
 </html>
