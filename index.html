@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PersonalPortfolio</title>
     <style>
-        html{
+        html {
             scroll-behavior: smooth;
         }
+
         * {
             margin: 0px 10px;
             padding: 0px;
@@ -51,31 +52,35 @@
             cursor: pointer;
         }
 
-        nav ul li a::before,
-        nav ul li a::after {
+        nav ul li a::after
+
+        /* ,
+        nav ul li a::before */
+            {
             position: absolute;
             content: "";
-            width: 100%;
-            background-color: darkcyan;
+            width: 0;
+            background-color: darkgoldenrod;
             height: 2px;
             left: 0px;
             opacity: 0;
             transition: all 0.3s;
         }
 
-        nav ul li a::before {
+        /* nav ul li a::before {
             top: 0px;
             transform: translateY(8px);
-        }
+        } */
 
         nav ul li a::after {
             bottom: 0px;
-            transform: translateY(-8px);
+            /* transform: translateY(-8px); */
         }
 
         nav ul li a:hover::after,
         nav ul li a:hover::before {
             opacity: 1;
+            width: 100%;
             transform: translateY(0px);
         }
 
@@ -95,17 +100,23 @@
             padding-right: 20px;
         }
 
+        .intro a {
+            text-decoration: none;
+            color: black;
+            margin: 0;
+        }
+
         .circle {
             width: 130px;
             height: 130px;
             line-height: 130px;
-            margin: 7vh 5px;
+            margin: 7vh 5px 0px 5px;
             border: 1px solid black;
             border-radius: 50%;
             display: inline-block;
             text-align: center;
             transition: all 0.3s;
-            
+
         }
 
         .dot1 {
@@ -117,7 +128,7 @@
         }
 
         .dot3 {
-            background-color: lightblue;
+            background-color: darkcyan;
         }
 
         span {
@@ -139,13 +150,23 @@
 
         }
 
-        footer div{
+        footer div {
             line-height: 2em;
         }
-        footer a{
+
+        footer a {
             text-decoration: none;
             color: black;
             cursor: pointer;
+        }
+
+        footer img {
+            width: 25px;
+            cursor: pointer;
+        }
+
+        .image_link {
+            margin: 0;
         }
     </style>
 </head>
@@ -158,7 +179,7 @@
         <div>
             <nav>
                 <ul>
-                    <li><a>RESUME</a></li>
+                    <li><a href="resume.html">RESUME</a></li>
                     <li><a>PROJECTS</a></li>
                     <li><a>CONTACT</a></li>
                 </ul>
@@ -166,15 +187,22 @@
         </div>
     </header>
     <section class="intro">
-        <img src="Images/photo.webp" alt="">
+        <img src="Images/photo.jpg" alt="">
         <div>
-            <h1 style="font-size: 80px; margin-top: 10vh; margin-bottom: 5vh;">Hello</h1>
+            <h1 style="font-size: 80px; margin-top: 5vh; margin-bottom: 5vh;">Hello</h1>
             <h1 style="margin-bottom: 2vh">A Bit About Me</h1>
-            <p style="line-height: 1.6;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad sequi praesentium
-                natus quo dolore obcaecati accusamus dolorem necessitatibus enim quibusdam!</p>
-            <div class="circle dot1"><span>Resume</span></div>
-            <div class="circle dot2"><span>Projects</span></div>
-            <div class="circle dot3"><span>Contact</span></div>
+            <p style="line-height: 1.6;">I enjoy building websites lately. I worked as a tutor in past for 2 year
+                because i loved teaching but now I commit my 100% work and effort in learning new skills. Exploring and
+                grinding everyday. </p>
+            <a href="resume.html">
+                <div class="circle dot1"><span>Resume</span></div>
+            </a>
+            <a href="projects.html">
+                <div class="circle dot2"><span>Projects</span></div>
+            </a>
+            <a href="contact.html">
+                <div class="circle dot3"><span>Contact</span></div>
+            </a>
         </div>
     </section>
     <hr>
@@ -189,7 +217,8 @@
         </div>
         <div>
             <h3>Follow me</h3>
-            <p>Twitter</p>
+            <a class="image_link" href="https://www.linkedin.com/in/yash-sharma-73b750243" target="blank"><img
+                    src="Images/linkedin.webp" alt="LinkedIn logo"></a>
         </div>
         <div>&#169; 2023 By Yash Sharma.</div>
     </footer>
