@@ -10,7 +10,6 @@
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-
         html {
             scroll-behavior: smooth;
         }
@@ -126,11 +125,14 @@
             animation: cssAnimation 0s 1s forwards;
             visibility: hidden;
         }
+
         @keyframes cssAnimation {
-            to{
+            to {
+                transition: all 2s ease-out;
                 visibility: visible;
             }
         }
+
         .dot1 {
             background-color: rgb(238, 176, 60);
         }
@@ -191,7 +193,7 @@
         <div>
             <nav>
                 <ul>
-                    <li class="active"><a href="index.html">HOME</a></li>
+                    <li class="active"><a href="javascript:void(0)">HOME</a></li>
                     <li class="nav_effect"><a href="resume.html">RESUME</a></li>
                     <li class="nav_effect"><a href="projects.html">PROJECTS</a></li>
                     <li class="nav_effect"><a href="contact.html">CONTACT</a></li>
